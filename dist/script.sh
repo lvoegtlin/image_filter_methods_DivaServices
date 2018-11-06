@@ -7,7 +7,7 @@ arguments=${3}
 
 if [ -z "$arguments" ]
 then
-    java -jar input/Filters.jar -f ${filter} -i ${inputImage} -o ${outputFolder}
+    java -jar /input/Filters.jar -f ${filter} -i ${inputImage} -o ${outputFolder}
 else
-    java -jar input/Filters.jar -f ${filter} -i ${inputImage} -o ${outputFolder} -a ${arguments}
+    java -jar /input/Filters.jar -f ${filter} -i ${inputImage} -o ${outputFolder} -a ${arguments}
 fi
