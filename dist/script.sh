@@ -1,9 +1,9 @@
 #!/bin/bash
 
-filter=${1}
-inputImage=${2}
-outputFolder=${3}
-arguments=${4}
+filter='gaussian'
+inputImage=${1}
+outputFolder=${2}
+arguments=${3}
 
 if [ -z "$arguments" ]
 then

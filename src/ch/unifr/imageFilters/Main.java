@@ -59,9 +59,6 @@ public class Main {
                 .required(false)
                 .build());
 
-        HelpFormatter formatter = new HelpFormatter();
-        formatter.printHelp("filters", ops);
-
         CommandLineParser parser = new DefaultParser();
         try {
             CommandLine cmd = parser.parse(ops, args);
@@ -78,7 +75,7 @@ public class Main {
 
             String outputPath = cmd.getOptionValue('o');
             String fileName = FilenameUtils.getName(inputImageName);
-            outputFile = new File(FilenameUtils.concat(outputPath, filterName + "_" + fileName));
+            outputFile = new File(outputPath + "/" + filterName + "_" + fileName);
 
             //executeClassWithArguments();
             executeFilter();
